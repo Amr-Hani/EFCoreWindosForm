@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Compile Update="CRUD\CourseForms\AddCourses.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="CRUD\CourseForms\DeleteCourse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="CRUD\CourseForms\ShowAllCources.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="CRUD\CourseForms\UpdateCourse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="CRUD\CourseSessionAttendanceForms\AddCourseSessionAttendance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="CRUD\CourseSessionAttendanceForms\ShowAllCourseSesionAttendance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="CRUD\CourseSessionForms\AddCourseSession.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="CRUD\CourseSessionForms\DeleteCourseSession.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="CRUD\CourseSessionForms\ShowAllCourseSession.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="CRUD\CourseSessionForms\UpdateCourseSession.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="CRUD\CourseStudentForms\AddCourseStudent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="CRUD\CourseStudentForms\DeleteCourseStudent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="CRUD\CourseStudentForms\ShowAllCourseStudent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="CRUD\DepartmentForms\AddDepartment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="CRUD\DepartmentForms\DeleteDepartment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="CRUD\DepartmentForms\ShowAllDepartment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="CRUD\DepartmentForms\UpdateDepartment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="CRUD\InstructorForms\AddInstructor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="CRUD\InstructorForms\DeleteInstructor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="CRUD\InstructorForms\ShowAllInstructor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="CRUD\InstructorForms\UpdateInstructor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="CRUD\Student\DeleteStudent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="CRUD\Student\StudentAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="CRUD\Student\StudentShow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="CRUD\Student\UpdateStudent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+</Project>
