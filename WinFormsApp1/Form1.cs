@@ -163,7 +163,7 @@ namespace WinFormsApp1
                     new AddCourseSessionAttendance().Show();
                     break;
                 case "Delete":
-                    //new DeleteCourseStudent().Show();
+                    new DeleteCourseSessionAttendence().Show();
                     break;
                 case "Update":
                     //new UpdateCourseSession().Show();

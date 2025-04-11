@@ -16,6 +16,9 @@
     <Compile Update="CRUD\CourseSessionAttendanceForms\AddCourseSessionAttendance.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="CRUD\CourseSessionAttendanceForms\DeleteCourseSessionAttendence.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="CRUD\CourseSessionAttendanceForms\ShowAllCourseSesionAttendance.cs">
       <SubType>Form</SubType>
     </Compile>

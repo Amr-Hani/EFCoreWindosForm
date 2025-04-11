@@ -21,7 +21,7 @@ namespace WinFormsApp1.CRUD.CourseSessionAttendanceForms
         {
             InitializeComponent();
             db = new MyContext();
-            FillCompoBoxCrsSession();
+            //FillCompoBoxCrsSession();
             FillCompoBox();
 
             ErrFName.Visible = false;
@@ -44,24 +44,29 @@ namespace WinFormsApp1.CRUD.CourseSessionAttendanceForms
                 isValid = false;
             }
 
-            if (string.IsNullOrWhiteSpace(lname) || !lname.All(char.IsLetter))
+            if (string.IsNullOrEmpty(lname) )
             {
                 isValid = false;
                 ErrLName.Visible = true;
             }
-           
+
             if (isValid)
             {
 
                 Guid studId = (Guid)comboBox2.SelectedValue;
                 Guid crsSessionId = (Guid)comboBox1.SelectedValue;
+                if(crsSessionId ==Guid.Empty)
+                {
+                    MessageBox.Show("course setion is requierd");
+                    return;
+                }
                 CourseSessionAttendance csa = new CourseSessionAttendance
-                { 
+                {
                     Grade = int.Parse(fname),
                     Notes = lname,
                     CrsSession_ID = crsSessionId,
                     St_ID = studId
-                    
+
 
                 };
                 db.CourseSessionAttendances.Add(csa);
@@ -100,7 +105,34 @@ namespace WinFormsApp1.CRUD.CourseSessionAttendanceForms
 
         private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
         {
+            if (comboBox2.SelectedValue.ToString() != "System.Data.DataRowView")
+            {
+                Guid stId = (Guid)comboBox2.SelectedValue;
 
+                List<CourseSession> crsSs = new List<CourseSession>();
+                var coursesEmrolledByStudent = db.CousreStudents.Where(cs => cs.St_ID == stId).ToList();
+
+                foreach (var item in coursesEmrolledByStudent)
+                {
+                    var colction = db.CourseSessions.Where(cs => cs.Crs_Id == item.CourseID).ToList();
+                    foreach (var item1 in colction)
+                    {
+                        crsSs.Add(item1);
+                    }
+                }
+                if (crsSs != null && crsSs.Count() > 0)
+                {
+
+                    comboBox1.DataSource = crsSs;
+                    comboBox1.DisplayMember = "Title";
+                    comboBox1.ValueMember = "CrsSession_Id";
+                }
+                else
+                {
+                    comboBox1.DataSource = null;
+                }
+
+            }
         }
 
         private void Lbl_Fname_TextChanged(object sender, EventArgs e)

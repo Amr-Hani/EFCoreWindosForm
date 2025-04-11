@@ -86,3 +86,5 @@ D:\ITI\SD\EFCore\Project\EFProject\WinFormsApp1\obj\Debug\net9.0-windows\WinForm
 D:\ITI\SD\EFCore\Project\EFProject\WinFormsApp1\obj\Debug\net9.0-windows\WinFormsApp1.CRUD.CourseStudentForms.DeleteCourseStudent.resources
 D:\ITI\SD\EFCore\Project\EFProject\WinFormsApp1\obj\Debug\net9.0-windows\WinFormsApp1.CRUD.CourseSessionAttendanceForms.ShowAllCourseSesionAttendance.resources
 D:\ITI\SD\EFCore\Project\EFProject\WinFormsApp1\obj\Debug\net9.0-windows\WinFormsApp1.CRUD.CourseSessionAttendanceForms.AddCourseSessionAttendance.resources
+D:\ITI\SD\EFCore\Project\EFProject\WinFormsApp1\obj\Debug\net9.0-windows\WinFormsApp1.sourcelink.json
+D:\ITI\SD\EFCore\Project\EFProject\WinFormsApp1\obj\Debug\net9.0-windows\WinFormsApp1.CRUD.CourseSessionAttendanceForms.DeleteCourseSessionAttendence.resources

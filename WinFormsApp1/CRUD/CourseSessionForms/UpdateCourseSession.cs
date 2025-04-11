@@ -42,7 +42,19 @@ namespace WinFormsApp1.CRUD.CourseSessionForms
             if (dateTimePicker1.Value != null)
             {
                 date = dateTimePicker1.Value;
-                ErrLName.Visible = false;
+
+
+                if (dateTimePicker1.Value.Date < DateTime.Today)
+                {
+                    ErrLName.Text = "Please select a valid future date cause i dont have a time machine";
+                    ErrLName.Visible = true;
+                    isValid = false;
+                }
+                else
+                {
+                    date = dateTimePicker1.Value;
+                    ErrLName.Visible = false;
+                }
             }
             else
             {
