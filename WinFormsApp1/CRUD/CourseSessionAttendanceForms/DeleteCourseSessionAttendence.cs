@@ -32,18 +32,23 @@ namespace WinFormsApp1.CRUD.CourseSessionAttendanceForms
                 List<CourseSession> crsSs = new List<CourseSession>();
                 var coursesEmrolledByStudent = db.CousreStudents.Where(cs => cs.St_ID == stId).ToList();
 
-                foreach (var item in coursesEmrolledByStudent)
-                {
-                    var colction = db.CourseSessions.Where(cs => cs.Crs_Id == item.CourseID).ToList();
-                    foreach (var item1 in colction)
+                var resultQuery = (
+                    from s in db.Students
+                    where s.St_Id == stId
+                    join item in db.CousreStudents on s.St_Id equals item.St_ID
+                    join c in db.Courses on item.CourseID equals c.Crs_Id
+                    join css in db.CourseSessions on c.Crs_Id equals css.Crs_Id
+                    join csa in db.CourseSessionAttendances on css.CrsSession_Id equals csa.CrsSession_ID
+                    select new
                     {
-                        crsSs.Add(item1);
+                        css.Title,
+                        css.CrsSession_Id
                     }
-                }
-                if (crsSs != null && crsSs.Count() > 0)
+                    ).ToList();
+                if (resultQuery != null && resultQuery.Count() > 0)
                 {
 
-                    comboBox1.DataSource = crsSs;
+                    comboBox1.DataSource = resultQuery;
                     comboBox1.DisplayMember = "Title";
                     comboBox1.ValueMember = "CrsSession_Id";
                 }
